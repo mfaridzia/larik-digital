@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
+    url: "https://larikdigital.com",
     siteName: siteConfig.name,
     locale: "id_ID",
     type: "website",
@@ -29,6 +30,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
+  },
+  alternates: {
+    canonical: "https://larikdigital.com",
   },
   icons: {
     icon: "/favicon.ico",
