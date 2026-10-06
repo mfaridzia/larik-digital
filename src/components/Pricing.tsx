@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight, Check, ShieldCheck, Wallet, MessageSquare } from "lucide-react";
 import { siteConfig, buildWhatsAppUrl, PricingPlan } from "@/config/site";
 
 export function Pricing() {
@@ -11,7 +11,7 @@ export function Pricing() {
         {/* Header */}
         <div className="max-w-[760px] mb-12 sm:mb-16">
           <div className="text-xs uppercase tracking-wider text-muted font-medium mb-3">
-            Harga Awal Transparan
+            Investasi Transparan & Fleksibel
           </div>
           <h2 className="text-[32px] sm:text-[44px] leading-tight font-semibold text-primary tracking-tight mb-4">
             {siteConfig.pricing.heading}
@@ -22,7 +22,7 @@ export function Pricing() {
         </div>
 
         {/* 4 Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 mb-10">
           {siteConfig.pricing.plans.map((plan: PricingPlan) => {
             const waUrl = buildWhatsAppUrl(plan.whatsappMessage);
 
@@ -95,6 +95,31 @@ export function Pricing() {
           })}
         </div>
 
+        {/* Reassurance Bar for UMKM */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 p-4 sm:p-5 rounded-xl border border-border/80 bg-surface text-xs text-[#4A4E58]">
+          <div className="flex items-start gap-3">
+            <ShieldCheck className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+            <div>
+              <span className="font-semibold text-primary block mb-0.5">Biaya Pembuatan 1 Kali</span>
+              <span className="text-[#6B7280]">Tanpa potongan omzet atau biaya sistem bulanan tak terduga.</span>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 border-t md:border-t-0 md:border-l border-border/70 pt-3 md:pt-0 md:pl-4">
+            <Wallet className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+            <div>
+              <span className="font-semibold text-primary block mb-0.5">Bisa Disesuaikan Budget</span>
+              <span className="text-[#6B7280]">Prioritaskan fitur yang paling penting sesuai kesiapan bisnis.</span>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 border-t md:border-t-0 md:border-l border-border/70 pt-3 md:pt-0 md:pl-4">
+            <MessageSquare className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+            <div>
+              <span className="font-semibold text-primary block mb-0.5">Konsultasi Awal Gratis</span>
+              <span className="text-[#6B7280]">Tanya jawab santai via WhatsApp tanpa ada paksaan atau komitmen.</span>
+            </div>
+          </div>
+        </div>
+
         {/* Content Addon Callout Banner */}
         <div className="rounded-xl border border-border bg-[#F5F5F2] p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
           <div className="max-w-[700px]">
@@ -123,7 +148,7 @@ export function Pricing() {
         </div>
 
         {/* Footnote */}
-        <div className="text-xs text-muted text-center max-w-[720px] mx-auto leading-relaxed">
+        <div className="text-xs text-muted text-center max-w-[740px] mx-auto leading-relaxed">
           {siteConfig.pricing.footnote}
         </div>
       </div>

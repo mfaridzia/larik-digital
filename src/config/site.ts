@@ -255,17 +255,17 @@ export const siteConfig = {
   },
 
   pricing: {
-    heading: "Mulai dari kebutuhan yang paling sederhana",
+    heading: "Biaya transparan, bisa disesuaikan dengan anggaran Anda",
     subheading:
-      "Setiap bisnis memiliki skala yang berbeda. Kami menggunakan harga awal transparan sehingga Anda bisa mulai dari yang paling relevan.",
+      "Mulai dari kebutuhan yang paling esensial untuk bisnis Anda. Tidak ada biaya langganan bulanan tersembunyi—diskusikan ide Anda terlebih dahulu, kami bantu sesuaikan fiturnya dengan kesiapan budget usaha.",
     footnote:
-      "Harga akhir menyesuaikan kebutuhan, jumlah halaman, fitur, integrasi, serta tingkat kompleksitas project.",
+      "Punya anggaran atau kebutuhan bertahap? Ceritakan saja rencana usaha Anda di WhatsApp. Kami akan bantu rekomendasikan solusi yang paling masuk akal tanpa membebani keuangan bisnis.",
     plans: [
       {
         id: "landing-page",
         title: "Website / Landing Page",
         price: "Rp500 ribu",
-        period: "mulai dari",
+        period: "biaya pembuatan mulai",
         description:
           "Untuk landing page sederhana atau website bisnis kecil yang ingin tampil resmi.",
         features: [
@@ -284,7 +284,7 @@ export const siteConfig = {
         id: "bisnis-katalog",
         title: "Website Bisnis / Katalog",
         price: "Rp800 ribu",
-        period: "mulai dari",
+        period: "biaya pembuatan mulai",
         description:
           "Untuk company profile, katalog produk, atau website dengan kebutuhan lebih lengkap.",
         features: [
@@ -303,7 +303,7 @@ export const siteConfig = {
         id: "sistem-bisnis",
         title: "Sistem Bisnis",
         price: "Rp999 ribu",
-        period: "mulai dari",
+        period: "biaya pembuatan mulai",
         description:
           "Untuk order, stok, dashboard, atau kebutuhan operasional bisnis sehari-hari.",
         features: [
