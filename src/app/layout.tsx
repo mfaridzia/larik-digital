@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: siteConfig.title,
   description: siteConfig.description,
-  metadataBase: new URL("https://larikdigital.com"),
+  metadataBase: new URL("https://larikdigital.web.id"),
   authors: [{ name: siteConfig.name }],
   keywords: [
     "jasa pembuatan website",
@@ -21,18 +21,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
-    url: "https://larikdigital.com",
+    url: "https://larikdigital.web.id",
     siteName: siteConfig.name,
     locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
+    images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://larikdigital.com",
+    canonical: "https://larikdigital.web.id",
   },
   icons: {
     icon: [
