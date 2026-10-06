@@ -1,12 +1,23 @@
 import React from "react";
-import { ArrowUpRight, Check, ShieldCheck, Layers, MessageSquare } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  ShieldCheck,
+  Layers,
+  MessageSquare,
+} from "lucide-react";
 import { siteConfig, buildWhatsAppUrl, PricingPlan } from "@/config/site";
 
 export function Pricing() {
-  const contentWaUrl = buildWhatsAppUrl(siteConfig.pricing.contentAddon.whatsappMessage);
+  const contentWaUrl = buildWhatsAppUrl(
+    siteConfig.pricing.contentAddon.whatsappMessage,
+  );
 
   return (
-    <section id="paket" className="py-20 sm:py-28 border-b border-border/70 scroll-mt-16">
+    <section
+      id="paket"
+      className="py-20 sm:py-28 border-b border-border/70 scroll-mt-16"
+    >
       <div className="max-w-container mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="max-w-[760px] mb-12 sm:mb-16">
@@ -64,7 +75,10 @@ export function Pricing() {
                       Cakupan Solusi:
                     </span>
                     {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-[13px] text-[#3D4048]">
+                      <div
+                        key={idx}
+                        className="flex items-start gap-2 text-[13px] text-[#3D4048]"
+                      >
                         <Check className="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" />
                         <span>{feature}</span>
                       </div>
@@ -98,28 +112,43 @@ export function Pricing() {
           <div className="flex items-start gap-3">
             <Layers className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
             <div>
-              <span className="font-semibold text-primary block mb-0.5">Transparan & Bertahap</span>
-              <span className="text-[#6B7280]">Biaya ditentukan berdasarkan scope fitur yang benar-benar Anda butuhkan.</span>
+              <span className="font-semibold text-primary block mb-0.5">
+                Transparan & Bertahap
+              </span>
+              <span className="text-[#6B7280]">
+                Biaya ditentukan berdasarkan scope fitur yang benar-benar Anda
+                butuhkan.
+              </span>
             </div>
           </div>
           <div className="flex items-start gap-3 border-t md:border-t-0 md:border-l border-border/70 pt-3 md:pt-0 md:pl-4">
             <ShieldCheck className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
             <div>
-              <span className="font-semibold text-primary block mb-0.5">Biaya Pembuatan 1 Kali</span>
-              <span className="text-[#6B7280]">Tanpa potongan omzet atau biaya langganan sistem bulanan tak terduga.</span>
+              <span className="font-semibold text-primary block mb-0.5">
+                Biaya Pembuatan 1 Kali
+              </span>
+              <span className="text-[#6B7280]">
+                Tanpa potongan omzet atau biaya langganan sistem bulanan tak
+                terduga.
+              </span>
             </div>
           </div>
           <div className="flex items-start gap-3 border-t md:border-t-0 md:border-l border-border/70 pt-3 md:pt-0 md:pl-4">
             <MessageSquare className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
             <div>
-              <span className="font-semibold text-primary block mb-0.5">Konsultasi Awal Bebas Biaya</span>
-              <span className="text-[#6B7280]">Diskusi santai via WhatsApp untuk menemukan solusi yang pas tanpa komitmen.</span>
+              <span className="font-semibold text-primary block mb-0.5">
+                Konsultasi Awal Bebas Biaya
+              </span>
+              <span className="text-[#6B7280]">
+                Diskusi santai via WhatsApp untuk menemukan solusi yang pas
+                tanpa komitmen.
+              </span>
             </div>
           </div>
         </div>
 
         {/* Content Addon Callout Banner */}
-        <div className="rounded-xl border border-border bg-[#F5F5F2] p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
+        {/* <div className="rounded-xl border border-border bg-[#F5F5F2] p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
           <div className="max-w-[700px]">
             <span className="text-xs font-mono uppercase tracking-wider text-accent font-semibold mb-1 block">
               {siteConfig.pricing.contentAddon.badge}
@@ -143,7 +172,7 @@ export function Pricing() {
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* Footnote */}
         <div className="text-xs text-muted text-center max-w-[740px] mx-auto leading-relaxed">
