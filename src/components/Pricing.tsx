@@ -1,17 +1,17 @@
 import React from "react";
-import { ArrowUpRight, Check, ShieldCheck, Wallet, MessageSquare } from "lucide-react";
+import { ArrowUpRight, Check, ShieldCheck, Layers, MessageSquare } from "lucide-react";
 import { siteConfig, buildWhatsAppUrl, PricingPlan } from "@/config/site";
 
 export function Pricing() {
   const contentWaUrl = buildWhatsAppUrl(siteConfig.pricing.contentAddon.whatsappMessage);
 
   return (
-    <section id="harga" className="py-20 sm:py-28 border-b border-border/70 scroll-mt-16">
+    <section id="paket" className="py-20 sm:py-28 border-b border-border/70 scroll-mt-16">
       <div className="max-w-container mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="max-w-[760px] mb-12 sm:mb-16">
           <div className="text-xs uppercase tracking-wider text-muted font-medium mb-3">
-            Investasi Transparan & Fleksibel
+            Pilihan Paket Solusi
           </div>
           <h2 className="text-[32px] sm:text-[44px] leading-tight font-semibold text-primary tracking-tight mb-4">
             {siteConfig.pricing.heading}
@@ -21,7 +21,7 @@ export function Pricing() {
           </p>
         </div>
 
-        {/* 4 Pricing Cards Grid */}
+        {/* 4 Solution Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 mb-10">
           {siteConfig.pricing.plans.map((plan: PricingPlan) => {
             const waUrl = buildWhatsAppUrl(plan.whatsappMessage);
@@ -36,27 +36,22 @@ export function Pricing() {
                 }`}
               >
                 <div>
-                  {/* Featured Badge */}
-                  {plan.featured && (
-                    <div className="mb-4">
-                      <span className="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 bg-primary text-white rounded">
-                        Paling Sering Dipilih
+                  {/* Scope Tag & Featured Badge */}
+                  <div className="flex flex-col gap-2 mb-4">
+                    {plan.featured && (
+                      <span className="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 bg-primary text-white rounded w-fit">
+                        Paling Banyak Dibutuhkan
                       </span>
-                    </div>
-                  )}
-
-                  {/* Title */}
-                  <h3 className="text-[18px] sm:text-[20px] font-semibold text-primary tracking-tight mb-2">
-                    {plan.title}
-                  </h3>
-
-                  {/* Price */}
-                  <div className="mb-3">
-                    <span className="text-xs text-muted block mb-0.5">{plan.period}</span>
-                    <span className="text-[26px] sm:text-[28px] font-bold text-primary tracking-tight">
-                      {plan.price}
+                    )}
+                    <span className="text-xs font-mono text-accent font-semibold">
+                      {plan.scopeTag}
                     </span>
                   </div>
+
+                  {/* Title */}
+                  <h3 className="text-[19px] sm:text-[21px] font-semibold text-primary tracking-tight mb-3">
+                    {plan.title}
+                  </h3>
 
                   {/* Description */}
                   <p className="text-[13px] text-[#555861] leading-relaxed pb-5 mb-5 border-b border-border/70">
@@ -65,6 +60,9 @@ export function Pricing() {
 
                   {/* Features */}
                   <div className="space-y-2.5 mb-8">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider block mb-2">
+                      Cakupan Solusi:
+                    </span>
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-2 text-[13px] text-[#3D4048]">
                         <Check className="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" />
@@ -98,24 +96,24 @@ export function Pricing() {
         {/* Reassurance Bar for UMKM */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 p-4 sm:p-5 rounded-xl border border-border/80 bg-surface text-xs text-[#4A4E58]">
           <div className="flex items-start gap-3">
-            <ShieldCheck className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+            <Layers className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
             <div>
-              <span className="font-semibold text-primary block mb-0.5">Biaya Pembuatan 1 Kali</span>
-              <span className="text-[#6B7280]">Tanpa potongan omzet atau biaya sistem bulanan tak terduga.</span>
+              <span className="font-semibold text-primary block mb-0.5">Transparan & Bertahap</span>
+              <span className="text-[#6B7280]">Biaya ditentukan berdasarkan scope fitur yang benar-benar Anda butuhkan.</span>
             </div>
           </div>
           <div className="flex items-start gap-3 border-t md:border-t-0 md:border-l border-border/70 pt-3 md:pt-0 md:pl-4">
-            <Wallet className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+            <ShieldCheck className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
             <div>
-              <span className="font-semibold text-primary block mb-0.5">Bisa Disesuaikan Budget</span>
-              <span className="text-[#6B7280]">Prioritaskan fitur yang paling penting sesuai kesiapan bisnis.</span>
+              <span className="font-semibold text-primary block mb-0.5">Biaya Pembuatan 1 Kali</span>
+              <span className="text-[#6B7280]">Tanpa potongan omzet atau biaya langganan sistem bulanan tak terduga.</span>
             </div>
           </div>
           <div className="flex items-start gap-3 border-t md:border-t-0 md:border-l border-border/70 pt-3 md:pt-0 md:pl-4">
             <MessageSquare className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
             <div>
-              <span className="font-semibold text-primary block mb-0.5">Konsultasi Awal Gratis</span>
-              <span className="text-[#6B7280]">Tanya jawab santai via WhatsApp tanpa ada paksaan atau komitmen.</span>
+              <span className="font-semibold text-primary block mb-0.5">Konsultasi Awal Bebas Biaya</span>
+              <span className="text-[#6B7280]">Diskusi santai via WhatsApp untuk menemukan solusi yang pas tanpa komitmen.</span>
             </div>
           </div>
         </div>

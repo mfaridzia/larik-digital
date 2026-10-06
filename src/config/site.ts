@@ -24,8 +24,7 @@ export interface WorkItem {
 export interface PricingPlan {
   id: string;
   title: string;
-  price: string;
-  period?: string;
+  scopeTag: string;
   description: string;
   features: string[];
   ctaText: string;
@@ -54,7 +53,7 @@ export const siteConfig = {
     { label: "Layanan", href: "#layanan" },
     { label: "Portofolio", href: "#portofolio" },
     { label: "Cara Kerja", href: "#cara-kerja" },
-    { label: "Harga", href: "#harga" },
+    { label: "Paket", href: "#paket" },
     { label: "FAQ", href: "#faq" },
   ],
 
@@ -255,86 +254,82 @@ export const siteConfig = {
   },
 
   pricing: {
-    heading: "Biaya transparan, bisa disesuaikan dengan anggaran Anda",
+    heading: "Pilihan paket solusi sesuai kebutuhan bisnis Anda",
     subheading:
-      "Mulai dari kebutuhan yang paling esensial untuk bisnis Anda. Tidak ada biaya langganan bulanan tersembunyi—diskusikan ide Anda terlebih dahulu, kami bantu sesuaikan fiturnya dengan kesiapan budget usaha.",
+      "Mulai dari profil online sederhana hingga sistem operasional terintegrasi. Kami bantu tentukan fitur yang paling relevan dengan alur kerja dan kesiapan usaha Anda.",
     footnote:
-      "Punya anggaran atau kebutuhan bertahap? Ceritakan saja rencana usaha Anda di WhatsApp. Kami akan bantu rekomendasikan solusi yang paling masuk akal tanpa membebani keuangan bisnis.",
+      "Estimasi biaya ditentukan secara transparan berdasarkan jumlah fitur, halaman, dan tingkat kompleksitas yang benar-benar Anda butuhkan. Konsultasi awal bebas biaya tanpa ikatan.",
     plans: [
       {
         id: "landing-page",
         title: "Website / Landing Page",
-        price: "Rp500 ribu",
-        period: "biaya pembuatan mulai",
+        scopeTag: "Profil Usaha & Identitas Online",
         description:
-          "Untuk landing page sederhana atau website bisnis kecil yang ingin tampil resmi.",
+          "Cocok untuk bisnis yang membutuhkan halaman profil resmi, informasi layanan, dan kontak yang rapi agar mudah ditemukan calon pelanggan.",
         features: [
-          "Single-page responsive modern",
-          "Informasi profil bisnis & layanan",
+          "1 halaman responsif cepat diakses HP",
+          "Informasi profil bisnis, layanan, & kontak",
           "Tombol direct chat ke WhatsApp",
           "Bantuan setup domain & hosting",
-          "Tampilan rapi dan cepat diakses HP",
+          "Tampilan profesional tanpa komplikasi",
         ],
-        ctaText: "Pilih Paket Ini",
+        ctaText: "Tanya Estimasi Biaya",
         whatsappMessage:
-          "Halo Larik Digital, saya tertarik membuat Website / Landing Page (mulai Rp500rb) untuk bisnis saya.",
+          "Halo Larik Digital, saya ingin menanyakan estimasi biaya pembuatan Website / Landing Page untuk bisnis saya.",
         featured: false,
       },
       {
         id: "bisnis-katalog",
-        title: "Website Bisnis / Katalog",
-        price: "Rp800 ribu",
-        period: "biaya pembuatan mulai",
+        title: "Website Bisnis & Katalog",
+        scopeTag: "Katalog Produk & Menu Digital",
         description:
-          "Untuk company profile, katalog produk, atau website dengan kebutuhan lebih lengkap.",
+          "Cocok untuk bisnis dengan banyak produk atau menu yang ingin pelanggan bisa melihat katalog dan pesan langsung tanpa ribet.",
         features: [
-          "Struktur multi-section / halaman lengkap",
-          "Katalog produk atau menu digital rapi",
-          "Galeri foto, lokasi Google Maps, kontak",
+          "Struktur katalog produk / digital menu rapi",
+          "Halaman detail produk & foto jelas",
           "Integrasi form / direct order WhatsApp",
-          "Setup basic SEO agar mudah dicari Google",
+          "Galeri foto, lokasi Google Maps, kontak",
+          "Setup basic SEO agar mudah dicari di Google",
         ],
-        ctaText: "Pilih Paket Ini",
+        ctaText: "Tanya Estimasi Biaya",
         whatsappMessage:
-          "Halo Larik Digital, saya tertarik membuat Website Bisnis / Katalog (mulai Rp800rb) untuk bisnis saya.",
+          "Halo Larik Digital, saya ingin menanyakan estimasi biaya pembuatan Website Bisnis & Katalog untuk bisnis saya.",
         featured: true,
       },
       {
         id: "sistem-bisnis",
-        title: "Sistem Bisnis",
-        price: "Rp999 ribu",
-        period: "biaya pembuatan mulai",
+        title: "Sistem Bisnis & Operasional",
+        scopeTag: "Order, Stok, & Transaksi",
         description:
-          "Untuk order, stok, dashboard, atau kebutuhan operasional bisnis sehari-hari.",
+          "Cocok untuk bisnis yang mulai kewalahan mengelola chat pesanan, rekap stok manual, dan pencatatan transaksi harian.",
         features: [
           "Dashboard ringkasan penjualan harian",
           "Pencatatan order & status transaksi",
           "Manajemen stok & inventaris barang",
-          "Database pelanggan & riwayat pembelian",
-          "Akses multi-staf & pelaporan rapi",
+          "Database pelanggan & histori pesanan",
+          "Akses multi-staf & laporan transaksi",
         ],
-        ctaText: "Pilih Paket Ini",
+        ctaText: "Tanya Estimasi Biaya",
         whatsappMessage:
-          "Halo Larik Digital, saya tertarik membuat Sistem Bisnis (mulai Rp999rb) untuk operasional usaha saya.",
+          "Halo Larik Digital, saya ingin menanyakan estimasi biaya pembuatan Sistem Bisnis & Operasional untuk usaha saya.",
         featured: false,
       },
       {
         id: "custom-app",
         title: "Custom Application",
-        price: "By Scope",
-        period: "penyesuaian",
+        scopeTag: "Workflow & Alur Kerja Khusus",
         description:
-          "Untuk aplikasi dengan workflow dan kebutuhan operasional khusus.",
+          "Cocok untuk bisnis yang membutuhkan sistem unik seperti booking jadwal, portal pelanggan, atau panel manajemen internal.",
         features: [
           "Arsitektur dirancang sesuai alur kerja Anda",
           "Dashboard internal, booking, atau portal mitra",
+          "Pembagian hak akses & wewenang staf",
           "Otomasi proses kerja & notifikasi",
-          "Review berkala di setiap tahap pengerjaan",
           "Pendampingan & penyesuaian lanjutan",
         ],
-        ctaText: "Konsultasi Scope",
+        ctaText: "Konsultasikan Scope",
         whatsappMessage:
-          "Halo Larik Digital, saya ingin konsultasi sistem Custom Application sesuai workflow bisnis saya.",
+          "Halo Larik Digital, saya ingin mendiskusikan kebutuhan sistem Custom Application untuk alur kerja bisnis saya.",
         featured: false,
       },
     ] as PricingPlan[],
@@ -342,10 +337,10 @@ export const siteConfig = {
       badge: "Kebutuhan Promosi Rutin",
       title: "Butuh konten media sosial secara berkala?",
       description:
-        "Tersedia paket Konten Digital mulai Rp199 ribu/paket untuk visual produk dan video pendek siap posting.",
-      cta: "Tanya paket konten →",
+        "Tersedia juga dukungan konten promosi visual dan video pendek siap posting untuk membantu bisnis Anda tetap aktif di media sosial.",
+      cta: "Tanya Paket Konten →",
       whatsappMessage:
-        "Halo Larik Digital, saya ingin menanyakan paket Konten Digital (mulai Rp199rb) untuk promosi media sosial bisnis saya.",
+        "Halo Larik Digital, saya ingin menanyakan paket Konten Digital untuk promosi media sosial bisnis saya.",
     },
   },
 
