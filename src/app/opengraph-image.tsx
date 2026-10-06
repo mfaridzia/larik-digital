@@ -28,25 +28,43 @@ export default function Image() {
         }}
       >
         {/* Brand */}
-        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-          <div
-            style={{
-              width: "16px",
-              height: "16px",
-              borderRadius: "9999px",
-              background: "#0F766E",
-            }}
-          />
-          <span
-            style={{
-              fontSize: "32px",
-              fontWeight: 600,
-              letterSpacing: "-0.02em",
-              color: "#ffffff",
-            }}
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <svg
+            width="42"
+            height="50"
+            viewBox="0 0 34 40"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            {siteConfig.name}
-          </span>
+            <path d="M6 5 L17 1 V21 L28 17 V29 L17 35 L6 30 Z" />
+            <path d="M17 1 V35" />
+            <path d="M6 30 L17 24 L28 29" />
+          </svg>
+          <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.05 }}>
+            <span
+              style={{
+                fontSize: "26px",
+                fontWeight: 700,
+                letterSpacing: "-0.03em",
+                color: "#ffffff",
+              }}
+            >
+              larik
+            </span>
+            <span
+              style={{
+                fontSize: "26px",
+                fontWeight: 400,
+                letterSpacing: "-0.02em",
+                color: "#9CA3AF",
+              }}
+            >
+              digital
+            </span>
+          </div>
         </div>
 
         {/* Content */}

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { siteConfig, buildWhatsAppUrl } from "@/config/site";
+import { Logo } from "@/components/Logo";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,18 +26,18 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-200 ${
         isScrolled
-          ? "bg-[#F9F9F8]/95 backdrop-blur-md border-b border-border py-4 shadow-sm"
-          : "bg-[#F9F9F8] border-b border-transparent py-6"
+          ? "bg-[#F9F9F8]/95 backdrop-blur-md border-b border-border py-3.5 shadow-sm"
+          : "bg-[#F9F9F8] border-b border-transparent py-5"
       }`}
     >
       <div className="max-w-container mx-auto px-5 sm:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-primary font-semibold tracking-tight text-xl group"
+          className="inline-flex items-center transition-opacity hover:opacity-80"
+          aria-label={siteConfig.name}
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-primary inline-block transition-transform duration-200 group-hover:scale-125" />
-          <span>{siteConfig.name}</span>
+          <Logo size="md" />
         </Link>
 
         {/* Desktop Navigation */}

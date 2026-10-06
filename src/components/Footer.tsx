@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { siteConfig, buildWhatsAppUrl } from "@/config/site";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   const waUrl = buildWhatsAppUrl();
@@ -14,10 +15,10 @@ export function Footer() {
           <div className="max-w-[420px] space-y-3">
             <Link
               href="/"
-              className="flex items-center gap-2 text-primary font-semibold tracking-tight text-lg"
+              className="inline-flex items-center transition-opacity hover:opacity-80"
+              aria-label={siteConfig.name}
             >
-              <span className="w-2.5 h-2.5 rounded-full bg-primary inline-block" />
-              <span>{siteConfig.name}</span>
+              <Logo size="md" />
             </Link>
             <p className="text-[14px] text-[#555861] leading-relaxed">
               {siteConfig.footer.tagline}
